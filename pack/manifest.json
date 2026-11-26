@@ -1,0 +1,50 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Village Library [v055]",
+    "description": "v055: grading added to the building menu: clears 40x40x40 to air with a dirt/stone floor, and collects ores, logs and other traded goods into a nearby chest. v054: the greenhouse's two dispensers beside the bee nests now come with shears inside, copied from the source world (extras structures). v053: the counter (iron block or waxed sign) is now the building core: detected after placement, recorded on the building record, and tapping it shows what the building produces (display-only mock). v052: brush undo refuses mines and ports (use the mace). v051: brush undo now dries the whole area first, same as the mace. v050: mace demolish first dries the whole area (removes all waterlogging and water, twice) before clearing. v049: sugar cane is placed last (no more cane in chests); mace demolish clears waterlogged water in every cell via slab+setWaterlogged(false). v048: greenhouse waterlogged cells now rotate with the building (v047 placed them unrotated, flooding wrong spots); mace demolish also sweeps leftover liquid. v047: wet cells now rotate with the building; mace demolish also sweeps leftover liquid; mace demolish now clears leftover waterlogged water (fill air per layer). greenhouse water now matches the source world (96 waterlogged channel stairs/slabs restored; the flowing channel is placed last so it no longer spills). v046: mace now clears the building area to bare ground (brush undo still restores the recorded terrain); stray waterlogging is cleared after placement. v045: mace destroy and undo now remove falling/attached blocks (anvils, torches, doors) top-down first, clear waterlogging, and sweep dropped items; the greenhouse entrance steps stay dry. v044: trapdoors now follow building rotation (trapdoor direction uses east/west/south/north order), and greenhouse sugar cane gets its water (adjacent stairs/slabs are waterlogged before the cane is placed). v043: greenhouse re-registered from the v4 export (lantern positions fixed, cherry leaves/wood removed, bee colony now in the other nest). v042: builds now run on real progress (gauge + %) instead of a fixed 5s countdown, and support-hungry blocks (sugar cane, bamboo, lanterns, wall signs, doors) are placed in a second pass after the main body. A library of village facilities. Place a bone block, hold paper and interact to pick a village (or My Creations) and build its facilities. v034: the cleanup sweep now also checks actual player positions before clearing a plot (occupied plots are skipped and retried at the end), and removes leftover mobs/drops like a normal box annihilation. v015: build the Mine to link it to an underground elevator room in a separate dimension.",
+    "uuid": "51a3c208-85d3-49ed-b39a-1e35f980cba5",
+    "version": [
+      0,
+      0,
+      55
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      50
+    ]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "07f68649-9af4-4f64-b2f8-99be475f7584",
+      "entry": "scripts/main.js",
+      "version": [
+        0,
+        0,
+        55
+      ]
+    },
+    {
+      "type": "data",
+      "uuid": "1c2fd3f5-a30a-433b-bb2f-422f56a151c6",
+      "version": [
+        0,
+        0,
+        55
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.9.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.1.0"
+    }
+  ]
+}
